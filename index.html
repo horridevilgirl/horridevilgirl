@@ -197,76 +197,7 @@
         <h2>archives</h2>
         <p>notes, drafts, and documents — most recent first</p>
       </div>
-      <div class="entry">
-        <div class="entry-header" onclick="toggleEntry(this)">
-          <span class="entry-num">[01]</span>
-          <span class="entry-title">on leaving a city you never really lived in</span>
-          <span class="entry-date">Mar 14, 2025</span>
-          <span class="entry-toggle">+</span>
-        </div>
-        <div class="entry-body">
-          <div class="email-meta">From: <span>horridevilgirl@gmail.com</span><br>Date: <span>Saturday, March 14, 2025 at 11:42 PM</span><br>To: <span>drafts</span></div>
-          <div class="email-content">
-            <p>There is a specific grief that comes from leaving a place you never fully arrived in. You pack the same bags you unpacked eighteen months ago and wonder if the city will notice.</p>
-            <p style="margin-top:1rem;">I kept meaning to go to that gallery on the canal. I kept meaning to learn the bus routes. I kept a list on my phone of restaurants I was saving for a special occasion that never came.</p>
-            <img src="https://images.unsplash.com/photo-1515518554841-b57750daf8b0?w=600&q=80" alt="canal at dusk" />
-            <p>See also: <a href="#">notes on temporary living</a>, <a href="#">the restaurant list</a>.</p>
-          </div>
-          <div class="sent-from">Sent from my iPhone</div>
-          <div class="quote">
-            <div class="quote-header">On Jan 3, 2024, at 9:12 AM, horridevilgirl@gmail.com wrote:</div>
-            <div class="quote-body">just landed. the apartment is smaller than the photos. there is one window and it faces a wall. i think i'm going to love it here.</div>
-          </div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="entry-header" onclick="toggleEntry(this)">
-          <span class="entry-num">[02]</span>
-          <span class="entry-title">notes on temporary living</span>
-          <span class="entry-date">Jan 29, 2025</span>
-          <span class="entry-toggle">+</span>
-        </div>
-        <div class="entry-body">
-          <div class="email-meta">From: <span>horridevilgirl@gmail.com</span><br>Date: <span>Wednesday, January 29, 2025 at 2:17 PM</span><br>To: <span>drafts</span></div>
-          <div class="email-content">
-            <p>A furnished apartment is a kind of amnesia. Someone else's taste, someone else's dishes. You eat off their plates and sleep under their duvet and conduct your entire inner life in a space that does not know your name.</p>
-            <p style="margin-top:1rem;">I have started to prefer it. The way you can leave without consequence. The way nothing accumulates.</p>
-          </div>
-          <div class="sent-from">Sent from my iPhone</div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="entry-header" onclick="toggleEntry(this)">
-          <span class="entry-num">[03]</span>
-          <span class="entry-title">the restaurant list</span>
-          <span class="entry-date">Nov 4, 2024</span>
-          <span class="entry-toggle">+</span>
-        </div>
-        <div class="entry-body">
-          <div class="email-meta">From: <span>horridevilgirl@gmail.com</span><br>Date: <span>Monday, November 4, 2024 at 7:55 PM</span><br>To: <span>drafts</span></div>
-          <div class="email-content">
-            <p>A running document. Updated sporadically. None of these have been visited.</p>
-            <p style="margin-top:1rem;">1. The Thai place near the overground that always has a queue.<br>2. The one my colleague mentioned that does the natural wine.<br>3. The basement Italian that requires booking three weeks ahead.<br>4. The café that is only open Tuesday to Thursday, 8am–2pm, for reasons unknown.</p>
-          </div>
-          <div class="sent-from">Sent from my iPhone</div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="entry-header" onclick="toggleEntry(this)">
-          <span class="entry-num">[04]</span>
-          <span class="entry-title">draft: something about mornings</span>
-          <span class="entry-date">Aug 12, 2024</span>
-          <span class="entry-toggle">+</span>
-        </div>
-        <div class="entry-body">
-          <div class="email-meta">From: <span>horridevilgirl@gmail.com</span><br>Date: <span>Monday, August 12, 2024 at 8:03 AM</span><br>To: <span>drafts</span></div>
-          <div class="email-content">
-            <p>not sure where this is going yet.</p>
-            <p style="margin-top:1rem;">something about the way mornings feel borrowed. like you haven't earned the day yet. the light comes in at an angle and you think: i could be anyone today. i could start something. and then you make coffee and the feeling passes and you are yourself again, reliably.</p>
-          </div>
-          <div class="sent-from">Sent from my iPhone</div>
-        </div>
-      </div>
+      <div id="archives-index"></div>
     </div>
   </div>
 
@@ -445,9 +376,95 @@
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(a => { if (a.textContent === id) a.classList.add('active'); });
     window.scrollTo(0, 0);
+    if (id === 'archives') loadArchives();
   }
 
-  // ARCHIVES
+  // ARCHIVES — load from GitHub
+  const GITHUB_USER = 'horridevilgirl';
+  const GITHUB_REPO = 'horridevilgirl';
+  const GITHUB_BRANCH = 'main';
+  const ARCHIVES_PATH = 'archives';
+
+  async function loadArchives() {
+    const index = document.getElementById('archives-index');
+    index.innerHTML = '<p style="font-size:13px;color:#aaa;padding:2rem 0;">loading notes...</p>';
+    try {
+      const res = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${ARCHIVES_PATH}?ref=${GITHUB_BRANCH}`);
+      const files = await res.json();
+      const mds = files.filter(f => f.name.endsWith('.md'));
+
+      const entries = await Promise.all(mds.map(async f => {
+        const r = await fetch(f.download_url);
+        const raw = await r.text();
+        return parseNote(raw, f.name);
+      }));
+
+      entries.sort((a, b) => new Date(b.date) - new Date(a.date));
+      renderArchives(entries);
+    } catch(e) {
+      index.innerHTML = '<p style="font-size:13px;color:#aaa;padding:2rem 0;">couldn\'t load notes — check back soon.</p>';
+    }
+  }
+
+  function parseNote(raw, filename) {
+    let title = filename.replace('.md', '');
+    let date = '';
+    let type = '';
+    let body = raw;
+
+    if (raw.startsWith('---')) {
+      const end = raw.indexOf('---', 3);
+      if (end !== -1) {
+        const front = raw.slice(3, end).trim();
+        body = raw.slice(end + 3).trim();
+        front.split('\n').forEach(line => {
+          const [k, ...v] = line.split(':');
+          const val = v.join(':').trim();
+          if (k.trim() === 'title') title = val;
+          if (k.trim() === 'date') date = val;
+          if (k.trim() === 'type') type = val;
+        });
+      }
+    }
+    return { title, date, type, body, filename };
+  }
+
+  function renderArchives(entries) {
+    const index = document.getElementById('archives-index');
+    index.innerHTML = '';
+    entries.forEach((e, i) => {
+      const num = String(i + 1).padStart(2, '0');
+      const displayDate = e.date ? new Date(e.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+      const htmlBody = e.body
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+        .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g,'<em>$1</em>')
+        .replace(/\[\[(.+?)\]\]/g,'<a href="#">$1</a>')
+        .replace(/\[(.+?)\]\((https?:\/\/.+?)\)/g,'<a href="$1" target="_blank">$2</a>')
+        .split('\n\n').map(p => p.trim() ? `<p style="margin-top:1rem;">${p.replace(/\n/g,'<br>')}</p>` : '').join('');
+
+      const div = document.createElement('div');
+      div.className = 'entry';
+      div.innerHTML = `
+        <div class="entry-header" onclick="toggleEntry(this)">
+          <span class="entry-num">[${num}]</span>
+          <span class="entry-title">${e.title}</span>
+          <span class="entry-date">${displayDate}</span>
+          <span class="entry-toggle">+</span>
+        </div>
+        <div class="entry-body">
+          <div class="email-meta">
+            From: <span>horridevilgirl@gmail.com</span><br>
+            Date: <span>${displayDate}</span><br>
+            To: <span>archives</span>
+          </div>
+          <div class="email-content">${htmlBody}</div>
+          <div class="sent-from">Sent from my iPhone</div>
+        </div>`;
+      index.appendChild(div);
+    });
+  }
+
   function toggleEntry(header) {
     const body = header.nextElementSibling;
     const tog = header.querySelector('.entry-toggle');
