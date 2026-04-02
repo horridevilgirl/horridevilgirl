@@ -428,19 +428,19 @@
     let type = '';
     let body = raw;
 
-    if (raw.startsWith('---')) {
-      const end = raw.indexOf('---', 3);
-      if (end !== -1) {
-        const front = raw.slice(3, end).trim();
-        body = raw.slice(end + 3).trim();
-        front.split('\n').forEach(line => {
-          const [k, ...v] = line.split(':');
-          const val = v.join(':').trim();
-          if (k.trim() === 'title') title = val;
-          if (k.trim() === 'date') date = val;
-          if (k.trim() === 'type') type = val;
-        });
-      }
+    const fmMatch = raw.match(/^---[\r\n]([\s\S]*?)[\r\n]---[\r\n]?([\s\S]*)$/);
+    if (fmMatch) {
+      const front = fmMatch[1];
+      body = fmMatch[2].trim();
+      front.split(/[\r\n]+/).forEach(line => {
+        const col = line.indexOf(':');
+        if (col === -1) return;
+        const k = line.slice(0, col).trim().toLowerCase();
+        const v = line.slice(col + 1).trim().replace(/^["']|["']$/g, '');
+        if (k === 'title' && v) title = v;
+        if (k === 'date' && v) date = v;
+        if (k === 'type' && v) type = v.toLowerCase();
+      });
     }
     return { title, date, type, body, filename };
   }
