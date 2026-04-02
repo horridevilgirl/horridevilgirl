@@ -1,6 +1,6 @@
 ---------
 
-title: A A Mood Board of a Beautiful Life
+title: A Mood Board of a Beautiful Life
 date: 2026-03-27
 type: journal
 tags:
