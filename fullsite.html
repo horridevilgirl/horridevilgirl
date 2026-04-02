@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@horridevilgirl</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Helvetica, Arial, sans-serif; background: #fff; color: #111; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-bottom: 1px solid #e5e5e5; }
+  .nav-title { font-size: 14px; font-weight: bold; text-decoration: none; color: #111; cursor: pointer; }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { font-size: 13px; color: #666; text-decoration: none; cursor: pointer; }
+  .nav-links a:hover { color: #111; }
+  .nav-links a.active { color: #111; font-weight: bold; }
+
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ===================== HOME ===================== */
+  .hero { padding: 5rem 0 0; display: flex; flex-direction: column; align-items: flex-end; }
+  .bubble {
+    background: #1c8eff; color: #fff;
+    font-size: clamp(36px, 7vw, 88px);
+    font-weight: normal; line-height: 1.05; letter-spacing: -0.03em;
+    padding: 2rem 2.5rem;
+    border-radius: 40px 40px 6px 40px;
+    position: relative; display: inline-block;
+  }
+  .bubble::after {
+    content: ''; position: absolute; bottom: 0; right: -18px;
+    width: 28px; height: 28px; background: #1c8eff;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  }
+  .bubble-meta { font-size: 12px; color: #aaa; margin-top: 8px; text-align: right; padding-right: 4px; }
+  .hero-image { width: 100%; height: 500px; background: #f0f0f0; border: 1px solid #e5e5e5; display: flex; align-items: center; justify-content: center; margin-top: 4rem; }
+  .hero-image p { font-size: 12px; color: #bbb; }
+  footer { border-top: 1px solid #e5e5e5; padding: 2rem 0; margin-top: 4rem; display: flex; justify-content: space-between; }
+  footer p { font-size: 12px; color: #aaa; }
+
+  /* ===================== ARCHIVES ===================== */
+  .page-header { padding: 3rem 0 2rem; border-bottom: 1px solid #e5e5e5; }
+  .page-header h2 { font-size: 13px; font-weight: normal; color: #aaa; margin-bottom: 0.3rem; }
+  .page-header p { font-size: 13px; color: #aaa; }
+  .archives-wrap { max-width: 720px; }
+  .entry { border-bottom: 1px solid #e5e5e5; }
+  .entry-header { display: flex; align-items: baseline; gap: 1rem; padding: 1.1rem 0; cursor: pointer; }
+  .entry-header:hover .entry-title { color: #1c8eff; }
+  .entry-num { font-size: 12px; color: #bbb; min-width: 28px; }
+  .entry-title { font-size: 14px; color: #111; flex: 1; }
+  .entry-date { font-size: 12px; color: #aaa; white-space: nowrap; }
+  .entry-toggle { font-size: 12px; color: #bbb; margin-left: 1rem; }
+  .entry-body { display: none; padding: 0 0 2rem 2.5rem; }
+  .entry-body.open { display: block; }
+  .email-meta { font-size: 12px; color: #aaa; margin-bottom: 1.2rem; line-height: 1.8; }
+  .email-meta span { color: #111; }
+  .email-content { font-size: 14px; line-height: 1.85; color: #222; margin-bottom: 1.5rem; }
+  .email-content a { color: #1c8eff; text-decoration: underline; }
+  .email-content img { max-width: 100%; margin: 1.2rem 0; display: block; border: 1px solid #e5e5e5; }
+  .sent-from { font-size: 12px; color: #aaa; margin-bottom: 1.5rem; }
+  .quote { border-left: 2px solid #e5e5e5; padding-left: 1rem; margin-top: 1.2rem; }
+  .quote-header { font-size: 12px; color: #7b7bff; margin-bottom: 0.5rem; }
+  .quote-body { font-size: 13px; color: #888; line-height: 1.8; }
+
+  /* ===================== EDITORIALS ===================== */
+  .shelf-wrap { margin: 3rem 0 0; }
+  .shelf { display: flex; align-items: flex-end; gap: 4px; flex-wrap: wrap; }
+  .spine { display: flex; align-items: center; justify-content: center; cursor: pointer; background: #0645ad !important; transition: filter 0.15s; flex-shrink: 0; }
+  .spine:hover { filter: brightness(0.88); }
+  .spine.active { filter: brightness(0.75); }
+  .spine-title { writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'Times New Roman', Times, serif; font-size: 12px; font-weight: normal; letter-spacing: 0.02em; padding: 12px 6px; line-height: 1.2; color: #fff !important; word-break: break-word; max-height: 100%; overflow: hidden; }
+  .essay-panel { display: none; border-bottom: 1px solid #e5e5e5; padding: 3rem 0; margin-top: 1px; }
+  .essay-panel.open { display: block; }
+  .essay-inner { max-width: 640px; }
+  .essay-kicker { font-size: 11px; color: #aaa; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
+  .essay-title { font-size: 32px; font-weight: bold; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+  .essay-subtitle { font-size: 15px; color: #666; margin-bottom: 2rem; line-height: 1.5; }
+  .essay-rule { border: none; border-top: 1px solid #e5e5e5; margin-bottom: 2rem; }
+  .essay-spread { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+  .essay-col p { font-size: 13px; line-height: 1.9; color: #333; }
+  .essay-col p + p { margin-top: 1rem; }
+  .essay-pullquote { font-size: 22px; font-weight: bold; line-height: 1.3; letter-spacing: -0.02em; border-top: 2px solid #111; border-bottom: 1px solid #e5e5e5; padding: 1.5rem 0; margin-bottom: 2rem; }
+  .essay-img-placeholder { width: 100%; height: 280px; background: #f0f0f0; border: 1px solid #e5e5e5; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; }
+  .essay-img-placeholder p { font-size: 12px; color: #bbb; }
+  .essay-close { font-size: 12px; color: #aaa; cursor: pointer; margin-top: 1rem; display: inline-block; }
+  .essay-close:hover { color: #111; }
+
+  /* ===================== FOOTAGE ===================== */
+  .yt-bar { background: #f8f8f8; border: 1px solid #e0e0e0; padding: 6px 12px; display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .yt-bar-logo { font-size: 18px; font-weight: bold; color: #cc0000; letter-spacing: -0.03em; }
+  .yt-bar-logo span { color: #333; }
+  .yt-search { display: flex; max-width: 320px; flex: 1; }
+  .yt-search input { flex: 1; border: 1px solid #bbb; border-right: none; padding: 4px 8px; font-size: 12px; font-family: Helvetica, Arial, sans-serif; outline: none; border-radius: 2px 0 0 2px; }
+  .yt-search button { background: #f0f0f0; border: 1px solid #bbb; padding: 4px 10px; font-size: 11px; cursor: pointer; border-radius: 0 2px 2px 0; font-family: Helvetica, Arial, sans-serif; }
+  .yt-bar-links { display: flex; gap: 12px; margin-left: auto; }
+  .yt-bar-links a { font-size: 11px; color: #0645ad; text-decoration: none; }
+  .footage-main { display: grid; grid-template-columns: 1fr 280px; gap: 24px; }
+  .featured-title { font-size: 18px; font-weight: bold; color: #111; margin-bottom: 4px; }
+  .featured-channel { font-size: 12px; color: #0645ad; margin-bottom: 10px; cursor: pointer; }
+  .video-player { width: 100%; aspect-ratio: 16/9; background: #111; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+  .video-player p { font-size: 12px; color: #555; }
+  .player-controls { background: #1a1a1a; padding: 6px 10px; display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .play-btn { font-size: 14px; color: #fff; cursor: pointer; }
+  .scrubber { flex: 1; height: 4px; background: #444; border-radius: 2px; }
+  .scrubber-fill { width: 35%; height: 100%; background: #cc0000; border-radius: 2px; }
+  .timecode { font-size: 10px; color: #ccc; white-space: nowrap; }
+  .video-meta { font-size: 12px; color: #666; margin-bottom: 10px; line-height: 1.7; }
+  .video-meta strong { color: #0645ad; }
+  .action-bar { display: flex; gap: 6px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+  .yt-btn { font-size: 11px; font-family: Helvetica, Arial, sans-serif; background: #f0f0f0; border: 1px solid #ccc; padding: 3px 8px; cursor: pointer; border-radius: 2px; color: #333; }
+  .views-count { font-size: 11px; color: #666; margin-left: auto; }
+  .comments-label { font-size: 13px; font-weight: bold; color: #333; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px; margin-bottom: 10px; }
+  .comment-box { width: 100%; border: 1px solid #ccc; padding: 6px 8px; font-size: 12px; font-family: Helvetica, Arial, sans-serif; color: #999; border-radius: 2px; resize: none; height: 52px; }
+  .sidebar-label { font-size: 12px; font-weight: bold; color: #333; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px; margin-bottom: 10px; }
+  .video-card { display: flex; gap: 8px; margin-bottom: 12px; cursor: pointer; }
+  .video-card:hover .vc-title { text-decoration: underline; }
+  .vc-thumb { width: 120px; min-width: 120px; aspect-ratio: 16/9; background: #ddd; position: relative; display: flex; align-items: center; justify-content: center; }
+  .vc-thumb-placeholder { font-size: 10px; color: #aaa; }
+  .vc-duration { position: absolute; bottom: 3px; right: 4px; background: rgba(0,0,0,0.75); color: #fff; font-size: 10px; padding: 1px 4px; border-radius: 2px; }
+  .vc-info { flex: 1; }
+  .vc-title { font-size: 12px; color: #0645ad; line-height: 1.4; margin-bottom: 2px; }
+  .vc-channel { font-size: 11px; color: #0645ad; margin-bottom: 1px; }
+  .vc-views { font-size: 11px; color: #666; }
+
+  /* ===================== ABOUT ===================== */
+  .desktop { position: relative; width: 100%; height: 700px; margin: 1rem 0 3rem; user-select: none; }
+  .window { position: absolute; background: #fff; border: 1px solid #c0c0c0; border-radius: 6px; box-shadow: 2px 4px 16px rgba(0,0,0,0.13); overflow: hidden; }
+  .titlebar { background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); border-bottom: 1px solid #c0c0c0; padding: 5px 10px; display: flex; align-items: center; gap: 6px; height: 24px; cursor: grab; }
+  .titlebar:active { cursor: grabbing; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .dot.r { background: #ff5f57; } .dot.y { background: #ffbd2e; } .dot.g { background: #28c840; }
+  .titlebar-label { font-size: 11px; color: #666; margin: 0 auto; }
+  .doc-window { width: 300px; top: 40px; left: 20px; z-index: 2; }
+  .doc-body { padding: 16px 18px; font-size: 13px; line-height: 1.85; color: #222; font-family: 'Times New Roman', Times, serif; }
+  .doc-body .field { margin-bottom: 10px; }
+  .doc-body .label { font-size: 10px; color: #aaa; text-transform: uppercase; letter-spacing: 0.08em; font-family: Helvetica, Arial, sans-serif; margin-bottom: 2px; }
+  .doc-body .value { font-size: 13px; color: #111; }
+  .doc-body .bio { font-size: 12px; line-height: 1.9; color: #333; margin-top: 12px; border-top: 1px solid #e5e5e5; padding-top: 12px; }
+  .doc-body .links { margin-top: 12px; border-top: 1px solid #e5e5e5; padding-top: 10px; }
+  .doc-body .links a { font-size: 12px; color: #0645ad; text-decoration: none; display: block; }
+  .pb-window { width: 280px; top: 180px; left: 260px; z-index: 3; }
+  .pb-body { background: #1a1a1a; padding: 12px; }
+  .pb-photo { width: 100%; aspect-ratio: 4/3; background: #2a2a2a; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border: 1px solid #333; }
+  .pb-photo p { font-size: 11px; color: #555; text-align: center; line-height: 1.6; }
+  .pb-strip { display: flex; gap: 4px; }
+  .pb-thumb { flex: 1; aspect-ratio: 4/3; background: #333; border: 1px solid #444; }
+  .pb-thumb.active { border-color: #ffd700; }
+  .pb-controls { display: flex; justify-content: center; gap: 12px; margin-top: 10px; }
+  .pb-btn { background: #333; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer; font-size: 13px; color: #fff; }
+  .sticky { border-radius: 2px; border: none; box-shadow: 2px 4px 10px rgba(0,0,0,0.12); }
+  .sticky .titlebar { border-radius: 2px 2px 0 0; border-bottom: none; }
+  .sticky-body { padding: 14px; font-size: 12px; line-height: 1.9; color: #444; font-family: 'Times New Roman', Times, serif; }
+  .sticky-yellow { width: 180px; top: 30px; left: 590px; z-index: 1; background: #fffde7; }
+  .sticky-yellow .titlebar { background: #f9e84a; }
+  .sticky-pink { width: 180px; top: 220px; left: 660px; z-index: 1; background: #fce4ec; }
+  .sticky-pink .titlebar { background: #f48fb1; }
+  .clock-window { width: 160px; top: 500px; left: 620px; z-index: 1; }
+  .clock-body { padding: 16px; text-align: center; }
+  .clock-time { font-size: 32px; font-weight: bold; letter-spacing: -0.03em; color: #111; }
+  .clock-location { font-size: 11px; color: #aaa; margin-top: 4px; }
+  .reading-window { width: 200px; top: 420px; left: 30px; z-index: 2; }
+  .reading-body { padding: 10px; background: #f5f5f5; }
+  .reading-img { width: 100%; aspect-ratio: 2/3; background: #ddd; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; margin-bottom: 8px; }
+  .reading-img p { font-size: 11px; color: #aaa; text-align: center; line-height: 1.6; }
+  .reading-caption { font-size: 11px; color: #666; text-align: center; font-family: 'Times New Roman', Times, serif; }
+  .reading-caption span { display: block; font-size: 10px; color: #aaa; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <span class="nav-title" onclick="goTo('home')">@horridevilgirl</span>
+    <div class="nav-links">
+      <a onclick="goTo('archives')">archives</a>
+      <a onclick="goTo('editorials')">editorials</a>
+      <a onclick="goTo('footage')">footage</a>
+      <a onclick="goTo('about')">about</a>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <div class="page active" id="page-home">
+    <div class="hero">
+      <div class="bubble">@horridevilgirl</div>
+      <div class="bubble-meta">delivered</div>
+      <div class="hero-image"><p>image placeholder</p></div>
+    </div>
+    <footer><p>@horridevilgirl</p><p>all rights reserved</p></footer>
+  </div>
+
+  <!-- ARCHIVES -->
+  <div class="page" id="page-archives">
+    <div class="archives-wrap">
+      <div class="page-header">
+        <h2>archives</h2>
+        <p>notes, drafts, and documents — most recent first</p>
+      </div>
+      <div class="entry">
+        <div class="entry-header" onclick="toggleEntry(this)">
+          <span class="entry-num">[01]</span>
+          <span class="entry-title">on leaving a city you never really lived in</span>
+          <span class="entry-date">Mar 14, 2025</span>
+          <span class="entry-toggle">+</span>
+        </div>
+        <div class="entry-body">
+          <div class="email-meta">From: <span>horridevilgirl@gmail.com</span><br>Date: <span>Saturday, March 14, 2025 at 11:42 PM</span><br>To: <span>drafts</span></div>
+          <div class="email-content">
+            <p>There is a specific grief that comes from leaving a place you never fully arrived in. You pack the same bags you unpacked eighteen months ago and wonder if the city will notice.</p>
+            <p style="margin-top:1rem;">I kept meaning to go to that gallery on the canal. I kept meaning to learn the bus routes. I kept a list on my phone of restaurants I was saving for a special occasion that never came.</p>
+            <img src="https://images.unsplash.com/photo-1515518554841-b57750daf8b0?w=600&q=80" alt="canal at dusk" />
+            <p>See also: <a href="#">notes on temporary living</a>, <a href="#">the restaurant list</a>.</p>
+          </div>
+          <div class="sent-from">Sent from my iPhone</div>
+          <div class="quote">
+            <div class="quote-header">On Jan 3, 2024, at 9:12 AM, horridevilgirl@gmail.com wrote:</div>
+            <div class="quote-body">just landed. the apartment is smaller than the photos. there is one window and it faces a wall. i think i'm going to love it here.</div>
+          </div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-header" onclick="toggleEntry(this)">
+          <span class="entry-num">[02]</span>
+          <span class="entry-title">notes on temporary living</span>
+          <span class="entry-date">Jan 29, 2025</span>
+          <span class="entry-toggle">+</span>
+        </div>
+        <div class="entry-body">
+          <div class="email-meta">From: <span>horridevilgirl@gmail.com</span><br>Date: <span>Wednesday, January 29, 2025 at 2:17 PM</span><br>To: <span>drafts</span></div>
+          <div class="email-content">
+            <p>A furnished apartment is a kind of amnesia. Someone else's taste, someone else's dishes. You eat off their plates and sleep under their duvet and conduct your entire inner life in a space that does not know your name.</p>
+            <p style="margin-top:1rem;">I have started to prefer it. The way you can leave without consequence. The way nothing accumulates.</p>
+          </div>
+          <div class="sent-from">Sent from my iPhone</div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-header" onclick="toggleEntry(this)">
+          <span class="entry-num">[03]</span>
+          <span class="entry-title">the restaurant list</span>
+          <span class="entry-date">Nov 4, 2024</span>
+          <span class="entry-toggle">+</span>
+        </div>
+        <div class="entry-body">
+          <div class="email-meta">From: <span>horridevilgirl@gmail.com</span><br>Date: <span>Monday, November 4, 2024 at 7:55 PM</span><br>To: <span>drafts</span></div>
+          <div class="email-content">
+            <p>A running document. Updated sporadically. None of these have been visited.</p>
+            <p style="margin-top:1rem;">1. The Thai place near the overground that always has a queue.<br>2. The one my colleague mentioned that does the natural wine.<br>3. The basement Italian that requires booking three weeks ahead.<br>4. The café that is only open Tuesday to Thursday, 8am–2pm, for reasons unknown.</p>
+          </div>
+          <div class="sent-from">Sent from my iPhone</div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-header" onclick="toggleEntry(this)">
+          <span class="entry-num">[04]</span>
+          <span class="entry-title">draft: something about mornings</span>
+          <span class="entry-date">Aug 12, 2024</span>
+          <span class="entry-toggle">+</span>
+        </div>
+        <div class="entry-body">
+          <div class="email-meta">From: <span>horridevilgirl@gmail.com</span><br>Date: <span>Monday, August 12, 2024 at 8:03 AM</span><br>To: <span>drafts</span></div>
+          <div class="email-content">
+            <p>not sure where this is going yet.</p>
+            <p style="margin-top:1rem;">something about the way mornings feel borrowed. like you haven't earned the day yet. the light comes in at an angle and you think: i could be anyone today. i could start something. and then you make coffee and the feeling passes and you are yourself again, reliably.</p>
+          </div>
+          <div class="sent-from">Sent from my iPhone</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDITORIALS -->
+  <div class="page" id="page-editorials">
+    <div class="page-header">
+      <h2>editorials</h2>
+      <p>essays as designed magazine spreads</p>
+    </div>
+    <div class="shelf-wrap">
+      <div class="shelf">
+        <div class="spine" style="width:52px;height:260px;" onclick="openEssay('e1',this)"><span class="spine-title">on beauty</span></div>
+        <div class="spine" style="width:80px;height:220px;" onclick="openEssay('e2',this)"><span class="spine-title">the internet as archive</span></div>
+        <div class="spine" style="width:44px;height:280px;" onclick="openEssay('e3',this)"><span class="spine-title">grief</span></div>
+        <div class="spine" style="width:96px;height:240px;" onclick="openEssay('e4',this)"><span class="spine-title">notes on femininity</span></div>
+        <div class="spine" style="width:60px;height:200px;" onclick="openEssay('e5',this)"><span class="spine-title">cities i've left</span></div>
+        <div class="spine" style="width:48px;height:265px;" onclick="openEssay('e6',this)"><span class="spine-title">boredom</span></div>
+        <div class="spine" style="width:88px;height:230px;" onclick="openEssay('e7',this)"><span class="spine-title">what photography takes</span></div>
+      </div>
+      <div class="essay-panel" id="e1"><div class="essay-inner">
+        <div class="essay-kicker">Essay No. 1</div>
+        <div class="essay-title">On Beauty</div>
+        <div class="essay-subtitle">A study in what we choose to call beautiful, and why we need so badly to call it something.</div>
+        <hr class="essay-rule">
+        <div class="essay-pullquote">"Beauty is not in the thing — it is in the permission we give ourselves to stop."</div>
+        <div class="essay-spread"><div class="essay-col"><p>There is a particular kind of beauty that only exists in passing. You catch it from a train window, or across a room, and the moment you turn to name it, it is already gone.</p></div><div class="essay-col"><p>The theorists say beauty is a category. That we impose it on the world like a grid. But I think it works the other way — that beauty is what happens when the world briefly refuses the grid.</p></div></div>
+        <div class="essay-img-placeholder"><p>full-page image placeholder</p></div>
+        <span class="essay-close" onclick="closeEssay('e1')">close ↑</span>
+      </div></div>
+      <div class="essay-panel" id="e2"><div class="essay-inner">
+        <div class="essay-kicker">Essay No. 2</div>
+        <div class="essay-title">The Internet as Archive</div>
+        <div class="essay-subtitle">Everything is still there. That is the problem.</div>
+        <hr class="essay-rule">
+        <div class="essay-pullquote">"The web does not forget. We have confused this for memory."</div>
+        <div class="essay-spread"><div class="essay-col"><p>There are photographs of me online from when I was sixteen that I cannot delete.</p></div><div class="essay-col"><p>This is the texture of contemporary selfhood. Not a continuous narrative but a series of cached versions.</p></div></div>
+        <div class="essay-img-placeholder"><p>full-page image placeholder</p></div>
+        <span class="essay-close" onclick="closeEssay('e2')">close ↑</span>
+      </div></div>
+      <div class="essay-panel" id="e3"><div class="essay-inner">
+        <div class="essay-kicker">Essay No. 3</div><div class="essay-title">Grief</div>
+        <div class="essay-subtitle">An incomplete account.</div><hr class="essay-rule">
+        <div class="essay-pullquote">"You do not move through grief. Grief moves through you, and leaves the furniture rearranged."</div>
+        <div class="essay-spread"><div class="essay-col"><p>Replace with your text.</p></div><div class="essay-col"><p>Replace with your text.</p></div></div>
+        <div class="essay-img-placeholder"><p>full-page image placeholder</p></div>
+        <span class="essay-close" onclick="closeEssay('e3')">close ↑</span>
+      </div></div>
+      <div class="essay-panel" id="e4"><div class="essay-inner">
+        <div class="essay-kicker">Essay No. 4</div><div class="essay-title">Notes on Femininity</div>
+        <div class="essay-subtitle">Working notes. Subject to revision.</div><hr class="essay-rule">
+        <div class="essay-pullquote">"Femininity is a performance that insists it is not one."</div>
+        <div class="essay-spread"><div class="essay-col"><p>Replace with your text.</p></div><div class="essay-col"><p>Replace with your text.</p></div></div>
+        <div class="essay-img-placeholder"><p>full-page image placeholder</p></div>
+        <span class="essay-close" onclick="closeEssay('e4')">close ↑</span>
+      </div></div>
+      <div class="essay-panel" id="e5"><div class="essay-inner">
+        <div class="essay-kicker">Essay No. 5</div><div class="essay-title">Cities I've Left</div>
+        <div class="essay-subtitle">A partial inventory.</div><hr class="essay-rule">
+        <div class="essay-pullquote">"Every city I've left has become, in leaving, the city I meant to live in."</div>
+        <div class="essay-spread"><div class="essay-col"><p>Replace with your text.</p></div><div class="essay-col"><p>Replace with your text.</p></div></div>
+        <div class="essay-img-placeholder"><p>full-page image placeholder</p></div>
+        <span class="essay-close" onclick="closeEssay('e5')">close ↑</span>
+      </div></div>
+      <div class="essay-panel" id="e6"><div class="essay-inner">
+        <div class="essay-kicker">Essay No. 6</div><div class="essay-title">Boredom</div>
+        <div class="essay-subtitle">In defence of having nothing to do.</div><hr class="essay-rule">
+        <div class="essay-pullquote">"Boredom is the only state that produces a self rather than consuming one."</div>
+        <div class="essay-spread"><div class="essay-col"><p>Replace with your text.</p></div><div class="essay-col"><p>Replace with your text.</p></div></div>
+        <div class="essay-img-placeholder"><p>full-page image placeholder</p></div>
+        <span class="essay-close" onclick="closeEssay('e6')">close ↑</span>
+      </div></div>
+      <div class="essay-panel" id="e7"><div class="essay-inner">
+        <div class="essay-kicker">Essay No. 7</div><div class="essay-title">What Photography Takes</div>
+        <div class="essay-subtitle">On cameras, consent, and the small violence of the image.</div><hr class="essay-rule">
+        <div class="essay-pullquote">"A photograph is an act of taking. We dress it up as an act of keeping."</div>
+        <div class="essay-spread"><div class="essay-col"><p>Replace with your text.</p></div><div class="essay-col"><p>Replace with your text.</p></div></div>
+        <div class="essay-img-placeholder"><p>full-page image placeholder</p></div>
+        <span class="essay-close" onclick="closeEssay('e7')">close ↑</span>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- FOOTAGE -->
+  <div class="page" id="page-footage">
+    <div class="page-header"><h2>footage</h2></div>
+    <div class="yt-bar">
+      <span class="yt-bar-logo">Mood<span>Tube</span></span>
+      <div class="yt-search"><input type="text" placeholder="Search" /><button>Search</button></div>
+      <div class="yt-bar-links"><a href="#">Browse</a><a href="#">Upload</a><a href="#">@horridevilgirl ▾</a></div>
+    </div>
+    <div class="footage-main">
+      <div>
+        <div class="featured-title">on not knowing what you're making</div>
+        <div class="featured-channel">horridevilgirl</div>
+        <div class="video-player"><p>video embed placeholder</p></div>
+        <div class="player-controls">
+          <span class="play-btn">▶</span>
+          <div class="scrubber"><div class="scrubber-fill"></div></div>
+          <span class="timecode">3:42 / 10:18</span>
+          <span style="font-size:12px;color:#ccc;">🔊</span>
+        </div>
+        <div class="video-meta"><strong>horridevilgirl</strong> — April 2, 2025 — A video essay about process, uncertainty, and the strange relief of finishing something you didn't understand while you were making it.</div>
+        <div class="action-bar">
+          <button class="yt-btn">👍 Like</button>
+          <button class="yt-btn">👎</button>
+          <button class="yt-btn">Save to ▾</button>
+          <button class="yt-btn">Share</button>
+          <button class="yt-btn">&lt;Embed&gt;</button>
+          <span class="views-count">1,204 views</span>
+        </div>
+        <div class="comments-label">Respond to this video</div>
+        <textarea class="comment-box" placeholder="Respond to this video..."></textarea>
+      </div>
+      <div>
+        <div class="sidebar-label">more from horridevilgirl</div>
+        <div class="video-card"><div class="vc-thumb"><span class="vc-thumb-placeholder">thumb</span><span class="vc-duration">8:44</span></div><div class="vc-info"><div class="vc-title">the city as a feeling (not a place)</div><div class="vc-channel">horridevilgirl</div><div class="vc-views">842 views</div></div></div>
+        <div class="video-card"><div class="vc-thumb"><span class="vc-thumb-placeholder">thumb</span><span class="vc-duration">14:02</span></div><div class="vc-info"><div class="vc-title">on rereading old journals</div><div class="vc-channel">horridevilgirl</div><div class="vc-views">3,317 views</div></div></div>
+        <div class="video-card"><div class="vc-thumb"><span class="vc-thumb-placeholder">thumb</span><span class="vc-duration">6:55</span></div><div class="vc-info"><div class="vc-title">boredom as a creative act</div><div class="vc-channel">horridevilgirl</div><div class="vc-views">588 views</div></div></div>
+        <div class="video-card"><div class="vc-thumb"><span class="vc-thumb-placeholder">thumb</span><span class="vc-duration">11:29</span></div><div class="vc-info"><div class="vc-title">what it means to document your own life</div><div class="vc-channel">horridevilgirl</div><div class="vc-views">2,091 views</div></div></div>
+        <div class="video-card"><div class="vc-thumb"><span class="vc-thumb-placeholder">thumb</span><span class="vc-duration">9:13</span></div><div class="vc-info"><div class="vc-title">grief, briefly</div><div class="vc-channel">horridevilgirl</div><div class="vc-views">4,760 views</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="page" id="page-about">
+    <div class="page-header"><h2>about</h2></div>
+    <div class="desktop" id="desktop">
+      <div class="window doc-window">
+        <div class="titlebar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="titlebar-label">about.txt — modified</span></div>
+        <div class="doc-body">
+          <div class="field"><div class="label">name</div><div class="value">Winona</div></div>
+          <div class="field"><div class="label">location</div><div class="value">Camden, London</div></div>
+          <div class="field"><div class="label">also known as</div><div class="value">@horridevilgirl</div></div>
+          <div class="bio">Creative director at a tech company by day, aspiring french diarist by night. Consumer of luxury goods, meditation enthusiast, cultural anthropologist, smoking expert, beauty queen who keeps them asking 'all this and brains too?!?'.</div>
+          <div class="links"><a href="https://instagram.com/horridevilgirl" target="_blank">instagram → @horridevilgirl</a></div>
+        </div>
+      </div>
+      <div class="window pb-window">
+        <div class="titlebar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="titlebar-label">Photo Booth</span></div>
+        <div class="pb-body">
+          <div class="pb-photo"><p>your photo booth<br>image here</p></div>
+          <div class="pb-strip"><div class="pb-thumb active"></div><div class="pb-thumb"></div><div class="pb-thumb"></div><div class="pb-thumb"></div></div>
+          <div class="pb-controls"><button class="pb-btn">⟵</button><button class="pb-btn" style="background:#cc0000;">⬤</button><button class="pb-btn">⟶</button></div>
+        </div>
+      </div>
+      <div class="window sticky sticky-yellow">
+        <div class="titlebar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="titlebar-label">things i believe in</span></div>
+        <div class="sticky-body">long lunches<br>expensive moisturiser<br>sitting with discomfort<br>the oxford comma<br>going to bed early</div>
+      </div>
+      <div class="window sticky sticky-pink">
+        <div class="titlebar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="titlebar-label">April Favourites</span></div>
+        <div class="sticky-body">placeholder serum<br>that one café<br>early mornings<br>this playlist<br>linen everything</div>
+      </div>
+      <div class="window reading-window">
+        <div class="titlebar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="titlebar-label">currently reading</span></div>
+        <div class="reading-body">
+          <div class="reading-img"><p>book cover<br>image here</p></div>
+          <div class="reading-caption">Title Here<span>Author Name</span></div>
+        </div>
+      </div>
+      <div class="window clock-window">
+        <div class="titlebar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="titlebar-label">London</span></div>
+        <div class="clock-body"><div class="clock-time" id="clock">--:--</div><div class="clock-location">Camden, London</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // NAV
+  function goTo(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(a => { if (a.textContent === id) a.classList.add('active'); });
+    window.scrollTo(0, 0);
+  }
+
+  // ARCHIVES
+  function toggleEntry(header) {
+    const body = header.nextElementSibling;
+    const tog = header.querySelector('.entry-toggle');
+    const open = body.classList.toggle('open');
+    tog.textContent = open ? '−' : '+';
+  }
+
+  // EDITORIALS
+  function openEssay(id, spine) {
+    const allP = document.querySelectorAll('.essay-panel');
+    const allS = document.querySelectorAll('.spine');
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    allP.forEach(p => p.classList.remove('open'));
+    allS.forEach(s => s.classList.remove('active'));
+    if (!isOpen) { panel.classList.add('open'); spine.classList.add('active'); panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  }
+  function closeEssay(id) {
+    document.getElementById(id).classList.remove('open');
+    document.querySelectorAll('.spine').forEach(s => s.classList.remove('active'));
+  }
+
+  // CLOCK
+  function updateClock() {
+    const t = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit' });
+    document.getElementById('clock').textContent = t;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // DRAG
+  let drag = null, ox = 0, oy = 0, topZ = 10;
+  document.querySelectorAll('.titlebar').forEach(bar => {
+    bar.addEventListener('mousedown', e => {
+      drag = bar.closest('.window');
+      drag.style.zIndex = ++topZ;
+      const r = drag.getBoundingClientRect();
+      const dr = document.getElementById('desktop').getBoundingClientRect();
+      ox = e.clientX - r.left; oy = e.clientY - r.top;
+      e.preventDefault();
+    });
+  });
+  document.addEventListener('mousemove', e => {
+    if (!drag) return;
+    const dr = document.getElementById('desktop').getBoundingClientRect();
+    let x = Math.max(0, Math.min(e.clientX - dr.left - ox, dr.width - drag.offsetWidth));
+    let y = Math.max(0, Math.min(e.clientY - dr.top - oy, dr.height - drag.offsetHeight));
+    drag.style.left = x + 'px'; drag.style.top = y + 'px';
+  });
+  document.addEventListener('mouseup', () => { drag = null; });
+</script>
+</body>
+</html>
