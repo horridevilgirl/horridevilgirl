@@ -1,3 +1,11 @@
+---------
+
+title: Literally Who Even Am I Anymore?
+date: 2026-04-02
+type: essay
+tags:
+
+---------
 
 
 Are you having a Brat Summer or a Bourdain Summer? Which trinket is hanging off your city bag? Where’s your Rhode lipgloss? I’ll see you at London Fields later, yeah? Cultural Stockholm Syndrome, Identity, and Self-Expression in the Age of the Internet. 

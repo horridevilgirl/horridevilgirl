@@ -1,3 +1,11 @@
+---------
+
+title: Project - 6 Months to be Unrecognisable
+date: 2026-04-02
+type: essay
+tags:
+
+---------
 
 ##### Part One: Identity Overhaul 
 

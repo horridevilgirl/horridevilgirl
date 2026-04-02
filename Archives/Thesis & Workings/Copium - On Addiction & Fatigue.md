@@ -1,3 +1,11 @@
+---------
+
+title: Copium - On Addiction & Fatigue
+date: 2026-04-02
+type: essay
+tags:
+
+---------
 ![[Pasted image 20260316164024.png|0]]
 
 People are smoking again. The data says this isn't true - less people are smoking. But I still see it all the time. There's a link between drinking and smoking, or plenty of people who don't consider themself anything more than 'social smokers'. Cigarettes, without any real intentional marketing aside from scary pictures of tumours and men with erectile dysfunction, have retained their status as an accessory to whatever is deemed 'cool' right now - Bushwick Line cooks, Blue Collar Cosplayers, girls with a chic French aura. I've noticed a lot of people recently calling out performative smoking; as in the act of smoking as something you do to seem cool rather than something you do because you just really love cigarettes. People who fall into the latter camp will sometimes take it upon themselves to comment online on the smoking habits of the performative nicotine addicts in the former camp, making sure that everyone knows that they themselves are gold star nicotine addicts who are addicted to a substance for their own enjoyment rather than being addicted to a substance because it says something about them. The big irony here is that needing people to know that you smoke in an authentic way rather than smoking as an accessory is performative as fuck. Smoking is a really costly performance, both financially and in terms of your health. So why would anyone put on this performance? What does it add to your life? Social credentials? Shorthand for taste? *Aura?*

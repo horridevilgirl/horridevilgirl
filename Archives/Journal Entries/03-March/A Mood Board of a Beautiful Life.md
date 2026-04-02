@@ -1,3 +1,11 @@
+---------
+
+title: A A Mood Board of a Beautiful Life
+date: 2026-03-27
+type: journal
+tags:
+
+---------
 
 After doing some serious soul-searching, and despite my newfound distaste for the 'collected' lifestyle, I've been reminded that I am, in fact, a visual creature. I like to be able to visualise things in a really concentrated way. Although Pinterest is useful and allows me to store images en masse, it means that I end up collecting rather than curating an idea of my idealised self. By limiting myself to four images to represent my aspiration, I become more selective, and thus more curation-al. 
 

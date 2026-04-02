@@ -1,3 +1,11 @@
+---------
+
+title: Stop What You're Doing & Get Weirder... NOW
+date: 2026-04-02
+type: essay
+tags:
+
+---------
 
 **Everywhere I look, I'm seeing weirdness reframed as something else - something more constrained, more *conservative*. In today's political climate, it's almost understandable; the need to reframe oddness through a lens of whimsy or of niche-ness or of intellect. Part of me finds joy in the fact that there is a growing desire for young women to be strange and unusual, but my inner sceptic that can simply not allow any kind of optimism to go unchecked has once again reared its ugly head and made some rather compelling points...**
 

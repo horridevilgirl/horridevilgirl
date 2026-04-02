@@ -1,2 +1,10 @@
+---------
+
+title: The House That Rick Built
+date: 2026-04-02
+type: essay
+tags:
+
+---------
 
 I have dedicated a lot of my time, affection, and finances to Rick Owens. This is no secret to anyone who knows me. Amongst my collection, I have pieces from as far back as the 90s (which as a 24 year old, this feels like owning fragments of history), cuts of jacket that are no longer produced, and runway items. I have everything from exotic leathers to current-season minimalist basics. There are few designers who have continued to have such a vice grip on my taste, and who have persevered as figureheads of my aspirational aesthetic through so many phases of life - I have loved Rick as a goth, I have loved him as an apostle of the Parisian, I have loved him through the time when I lost myself to the tangibly plush appeal of Scandi-inspired capsule wardrobes. And that's just it - more than I love the clothes, I love Rick. He is to me what Jesus Christ is to the Catholic-leaning agnostic; the personification of something entirely unknowable that I long to be certain of. That is not to say that I view him as some kind of God or deity, but rather as something more terrifying. To me, Rick Owens represents the closest thing to fully realised potential of complete, self-assured identity. It is both terrifying and inspiring to know that this is something that, under the right conditions, can truly be possible. 

@@ -1,3 +1,11 @@
+---------
+
+title: Horizontal for Attention, Virtual For Results - On Digital Self Harm
+date: 2026-04-02
+type: essay
+tags:
+
+---------
 
 I'm decidedly too old to be cutting myself. I have actually been decidedly too old for that since I was eighteen and felt it was childish of me to be breaking apart pencil sharpeners in my university's communal art room and sweating through hoodies in unventilated October mugginess. But that doesn't mean that the urge to inflict pain has necessarily gone away, instead it's just changed form. This isn't exclusive to me. I have seen and heard about people putting themselves in all kinds of risky scenarios, from unprotected sex with total strangers to spontaneous trips abroad with no hotel booked and a dubious plan to just sleep on the beach. But the most common form of adulthood self-harm, and the kind I have frequently indulged in myself, is handheld and entirely contained within 9:16 ratio - like everyone else on social media right now, I too have come to the conclusion that social media is indeed bad for mental health.
 

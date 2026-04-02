@@ -1,3 +1,11 @@
+---------
+
+title: Wait a Second... Who Are You?
+date: 2026-04-02
+type: essay
+tags:
+
+---------
 
 The problem with wanting to be smartest, funniest, sexiest, most interesting and stylish person in the room is it detracts from your ability to enjoy being in a room full of smart, funny, sexy, interesting and stylish people. The more we add to this imaginary idea of our ideal self, the more adjectives we pile onto the way we want to be perceived, the less is left of us. Picture, as clearly as you can in your mind, a blade-less knife with no handle. Do you see how the more words I add, the less is there for you to picture? I am describing an object into nothingness, which I think we may be guilty of doing to ourselves, and to our sense of ourselves by proxy. The idea is hardly a philosophical breakthrough - Christian scientists have spent lifetimes wondering about the idea of nothingness; the idea of describing or explaining something with so much detail that it begins to contradict itself, until the original idea described becomes nothing at all. Now, with this in mind, when you're not the smartest, funniest, sexiest, most interesting and fashionable person in a room... *who are you?* What's left after you strip away imaginary accolades, other than the ambition to achieve them?
 
