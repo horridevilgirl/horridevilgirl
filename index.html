@@ -197,6 +197,11 @@
         <h2>archives</h2>
         <p>notes, drafts, and documents — most recent first</p>
       </div>
+      <div style="display:flex;gap:1rem;padding:1rem 0 1.5rem;border-bottom:1px solid #e5e5e5;margin-bottom:0;">
+        <button onclick="filterArchives('all')" id="filter-all" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;background:none;border:none;cursor:pointer;color:#111;font-weight:bold;padding:0;">all</button>
+        <button onclick="filterArchives('essay')" id="filter-essay" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;background:none;border:none;cursor:pointer;color:#aaa;padding:0;">essays</button>
+        <button onclick="filterArchives('journal')" id="filter-journal" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;background:none;border:none;cursor:pointer;color:#aaa;padding:0;">journal</button>
+      </div>
       <div id="archives-index"></div>
     </div>
   </div>
@@ -379,9 +384,19 @@
     if (id === 'archives') loadArchives();
   }
 
+  function filterArchives(type) {
+    document.querySelectorAll('[id^="filter-"]').forEach(b => b.style.color = '#aaa');
+    document.querySelectorAll('[id^="filter-"]').forEach(b => b.style.fontWeight = 'normal');
+    document.getElementById('filter-' + type).style.color = '#111';
+    document.getElementById('filter-' + type).style.fontWeight = 'bold';
+    const filtered = type === 'all' ? window._allEntries : window._allEntries.filter(e => e.type === type);
+    renderArchives(filtered);
+  }
+
   // ARCHIVES — load from GitHub
   const GITHUB_USER = 'horridevilgirl';
   const GITHUB_REPO = 'horridevilgirl';
+
   const GITHUB_BRANCH = 'main';
   const ARCHIVES_PATH = 'archives';
 
@@ -399,7 +414,8 @@
         return parseNote(raw, f.name);
       }));
 
-      entries.sort((a, b) => new Date(b.date) - new Date(a.date));
+        entries.sort((a, b) => new Date(b.date) - new Date(a.date));
+      window._allEntries = entries;
       renderArchives(entries);
     } catch(e) {
       index.innerHTML = '<p style="font-size:13px;color:#aaa;padding:2rem 0;">couldn\'t load notes — check back soon.</p>';
