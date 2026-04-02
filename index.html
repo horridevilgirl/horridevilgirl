@@ -428,7 +428,7 @@
     let type = '';
     let body = raw;
 
-    const fmMatch = raw.match(/^---[\r\n]([\s\S]*?)[\r\n]---[\r\n]?([\s\S]*)$/);
+    const fmMatch = raw.match(/^-{3,}[\r\n]([\s\S]*?)[\r\n]-{3,}[\r\n]?([\s\S]*)$/);
     if (fmMatch) {
       const front = fmMatch[1];
       body = fmMatch[2].trim();
