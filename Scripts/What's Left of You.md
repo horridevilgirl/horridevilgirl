@@ -1,6 +1,5 @@
 
 
-
 Have you ever thought that the problem with wanting to be smartest, funniest, sexiest, most interesting and stylish person in the room might just be that it detracts from your ability to enjoy being in a room full of smart, funny, sexy, interesting and stylish people.
 
 Okay so I want you to do something for me. Just... picture a knife. Like, a normal knife. Whatever comes to mind.
@@ -13,17 +12,15 @@ Now picture a blade-less knife with no handle.
 
 What do you see?
 
-Nothing, right? Like, some weird embarrassed blur where an object used to be. And I think that's so interesting, because, okay, follow me here, before I said the word knife, before I gave you literally anything, your mind was just open. You could have pictured anything. Anything in the world. And then I started describing, and with every word the options just... closed. And by the time I finished you had nothing. Not just no knife, nothing. I didn't tell you to picture nothing. You could have pictured literally anything in the world other than the knife, but because I'd put that initial idea in your head, it put a block in the way of you imagining any of the other infinite things that exist. I didn't describe something into nothingness, I described you out of infinite possibility.
+Nothing, right? Like, some weird blur where a knife used to be. And I think that's so interesting, because, okay, follow me here, before I said the word knife, before I gave you literally anything, your mind was just open. You could have pictured anything. Anything in the world. And then I started describing, and with every word the options just... closed. And by the time I finished you had nothing. Not just not a knife, nothing. I didn't tell you to picture nothing. You could have pictured literally anything in the world other than the knife, but because I'd put that initial idea in your head, it put a block in the way of you imagining any of the other infinite things that exist. I didn't describe something into nothingness, I described you out of infinite possibility.
 
 And I've been thinking about this for months. Specifically about how we do this to ourselves. 
 
-So there's this thing I think a lot of us do, I definitely do it, where we build this version of ourselves in our heads. Like, the ideal self. And she's great, she's really great, she's smarter and funnier and she's read more books and she replies to emails promptly and she would never have said that thing you said at that dinner party in 2019 that you still think about. She's a lot.
+So there's this thing I think a lot of us do, I definitely do it, where we build this version of ourselves in our heads. Like, the ideal self. And she's great, she's really great, she's smarter and funnier and she's read more books and she replies to emails promptly and she would never have said that thing you said at that party in 2019 that you still think about. She's a lot.
 
 And the problem, and this is the thing that I think is actually worth talking about, is that the more you add to her, the more qualities you decide she absolutely must have, the further away from yourself you get. Because every adjective is also a verdict. Every "she would be more like this" is also an implicit "and you are not."
 
 There's a concept in psychology called the "ought self". Tory Higgins came up with it in the late eighties as part of self-discrepancy theory, and it's basically the version of you that you feel obligated to be. Not even who you want to be, who you think you should be. And Higgins found that the gap between your actual self and your ought self is specifically associated with anxiety. Like, not general dissatisfaction. Anxiety. The chronic, low-level, something-is-wrong-and-I-can't-name-it kind of feeling that makes you feel like you're going to be sick.
-
-If you've ever spent a Sunday afternoon feeling vaguely terrible for no identifiable reason, that might be the most validating sentence you've heard in a while.
 
 And here's the part that I find a bit... I don't know, funny? Sad? Both?; the ideal self is almost entirely made of other people. She's assembled from everyone you've ever admired, or been intimidated by, or wanted to impress. She's not really you at all. She's a collage. She's a mood board. She's a very high-maintenance piece of collaborative fan fiction.
 
@@ -35,7 +32,6 @@ But here's what that fantasy actually does to you while you're in the room: it m
 
 You can't be a guest and a host simultaneously. And you can't perform a self and actually be one at the same time, I think that's just true, and I think we know it, and I think we do it anyway.
 
-
 The accumulation thing is what gets me. Because every adjective you add to the ideal self isn't just an aspiration, it's another metric by which the actual you is currently failing. And she doesn't take days off. She's not aspirational, she's punitive. She follows you into every room with a clipboard and she is taking notes and none of them are favourable and she never, ever goes home.
 
 Okay so here's where it gets interesting to me. Because there's this whole tradition, in philosophy, in theology, in poetry, of approaching things by subtraction. Like, the idea that the way to really understand something isn't to keep adding description, it's to carefully take things away.
@@ -44,15 +40,13 @@ There's a theological concept called apophatic theology (or the via negativa) wh
 
 And separately, Keats, in a letter he wrote when he was like twenty-two, which is frankly annoying, described what he called negative capability. The ability to stay inside uncertainty and contradiction without, and I love this phrase, "an irritable reaching after fact and reason." Just sitting with not knowing. Letting something be unresolved without it needing to be fixed.
 
-These are very different thinkers arriving at something similar from completely different directions, which I always think is a sign you're probably onto something real. The empty vessel. The beginner's mind. The deliberate practice of not-defining as the precondition for actually understanding anything.
+These are very different kinds of thinkers arriving at something similar from completely different directions, which I always think is a sign you're probably onto something real. The empty vessel. The beginner's mind. The deliberate practice of not-defining as the precondition for actually understanding anything.
 
 I'm not saying this makes you enlightened, I'm not making that kind of video. I'm just saying: there's a reason smart people keep ending up here. Emptiness isn't a problem. Absence of definition isn't failure. Sometimes it's the whole point.
 
 Because think about what becomes possible when you stop performing the ideal self, even just for a minute. When you walk into a room without the clipboard, without the adjectives. When you're not defending a self, you can actually be curious about things. When you're not monitoring the room, you can actually be in it. When you're not busy being interesting, you might accidentally become interested in something, which is, I'd argue, considerably more fun and also just a better way to live.
 
-The knife before I started describing it. That openness. That's not nothing. That's everything.
-
-Okay so I have to be honest about this now because I've been slightly academic about it and that's a bit cowardly.
+Okay so I have to be honest about this now because I've been  quite academic about it and that's a bit cowardly.
 
 I have spent a genuinely embarrassing amount of my life in active negotiation with the ideal self. And she is so tiring. She has very strong opinions about things I said in conversations that ended years ago. She brings up unprompted every creative risk I didn't take, and every one I did take, and she has notes on both. She is never satisfied. She doesn't do praise. And on the occasions when something goes well, a conversation that actually landed, something I made that I'm genuinely proud of, she's already moved on. Already recalibrated. Already raising the bar before I've even had a moment to just, like, be pleased.
 
