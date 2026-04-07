@@ -6,7 +6,140 @@
 > This curriculum is built around thematic units rather than subjects, because your mind works in connections rather than categories. Each unit is anchored by a central question and approached through four lenses: **art & culture**, **philosophy & ethics**, **psychology & the self**, and **science & nature**. The units build on one another — complete them in order where possible, but return to any of them whenever life makes one feel relevant.
 
 ---
+# Unit Zero: The Anthropological Imagination
 
+_Why we do what we do, become who we become, and build the worlds we build_
+
+> This unit sits before all the others because it is the foundation beneath them. Every other unit in this curriculum asks a specific question — about the body, beauty, identity, desire, the authored self. This unit asks the question underneath all of those questions: **what kind of creature is a human being, and why does it behave this way?**
+
+---
+
+## Central Question
+
+Why do humans — across all cultures, all eras, all circumstances — consistently do the same things: build hierarchies, create idols, form tribes, perform rituals, tell myths, seek the sacred, make art, fall in love with beauty, and construct elaborate systems of meaning to make sense of a universe that offers none by default?
+
+This is the anthropological question. It is also, quietly, the question your entire life is asking.
+
+---
+
+## Why This Unit Comes First
+
+Everything else in this curriculum — the gaze, the shadow, the authored self, the body — makes more sense when you understand it as an expression of something deeper: the human animal's compulsive need to make meaning, build identity, and locate itself within a story larger than itself.
+
+The "esoteric pilates princess" is not just an aesthetic. She is a **mythological figure** — an archetype, a cultural construction, a vessel for a particular set of human values and desires. Understanding _why_ humans need figures like this, why we create and inhabit and worship them, is the anthropological question. And answering it will make your understanding of your own self-construction richer and stranger and more interesting than any style guide could.
+
+---
+
+## The Thinkers Who Will Feel Like Home
+
+**Joseph Campbell** — _The Hero with a Thousand Faces_ Campbell's central argument is that across every culture in human history, the same story gets told: a hero leaves the ordinary world, undergoes transformation through trial and encounter with the shadow, and returns changed. He calls this the **monomyth** — the single story underneath all stories. Read this and you will never watch a film, read a novel, or examine your own life the same way again. Campbell is also one of the most readable serious thinkers of the 20th century — begin here.
+
+**Carl Jung** — _The Archetypes and the Collective Unconscious_ (selected essays) You've already encountered Jung through shadow work. Go deeper. Jung's theory of archetypes — the universal figures and patterns that recur across all human cultures in myth, dream, and art — is the psychological foundation for Campbell's work and for most serious thinking about why humans create the symbols and idols they do. The archetypes are not invented by individuals. They arise from what Jung calls the **collective unconscious** — the shared psychic inheritance of the entire species.
+
+**Mircea Eliade** — _The Sacred and the Profane_ Eliade was a historian of religion who argued that the distinction between the sacred and the ordinary is one of the most fundamental structures of human experience — that humans are irreducibly _homo religiosus_, meaning-seeking creatures who cannot help but locate certain times, places, objects, and people in a category of the sacred. Even in secular life — celebrity culture, fashion, music, sport — the sacred persists in new forms. This is essential reading for understanding why we create idols.
+
+**Claude Lévi-Strauss** — _Myth and Meaning_ Lévi-Strauss argued that myths are not primitive attempts at science or history — they are the way human minds organise and process the fundamental contradictions of existence: life and death, nature and culture, self and other. _Myth and Meaning_ is short and accessible and will change the way you read everything.
+
+**René Girard** — _Violence and the Sacred_ (selected sections) Girard's theory of **mimetic desire** — the idea that we don't know what to want until we see someone else wanting it, that desire is fundamentally imitative and social rather than individual and authentic — is one of the most unsettling and liberating ideas you will encounter. It reframes everything: fashion, celebrity, social media, relationships, the formation of taste. Why do we create idols? Because we need models for desire, and we call those models icons.
+
+**Victor Turner** — _The Ritual Process_ Turner's concept of **liminality** — the threshold state between one identity and another, the in-between space of transformation — is directly relevant to everything your document is trying to do. Every rite of passage, every initiation, every moment of genuine change involves a liminal phase: the old self has dissolved but the new self has not yet solidified. You are in a liminal phase right now. Turner will help you understand what that means and why it is necessary.
+
+**Mary Douglas** — _Purity and Danger_ Douglas argues that what any culture defines as dirty, taboo, or transgressive tells you everything about how that culture organises meaning and identity. The shadow self — the parts of yourself you've labelled deviant, shameful, or unacceptable — is a direct product of the cultural categories you've internalised. Douglas gives you the anthropological tools to examine those categories critically.
+
+**Émile Durkheim** — _The Elementary Forms of Religious Life_ (selected sections) Durkheim, one of the founders of sociology, argued that religion is not primarily about God — it is about **community**. The sacred is a way of marking the things a group holds in common, and ritual is the technology by which communities renew their collective identity. Apply this to fashion communities, music subcultures, aesthetic tribes, and it becomes electric.
+
+---
+
+## The Central Themes
+
+**Myth and the human need for story** Humans are the only animals that live inside narratives. We cannot experience our lives as raw events — we immediately convert them into stories with meanings, patterns, and arcs. Campbell and Jung argue this is not a cultural overlay but a biological necessity. The self is a story the brain tells itself. The curriculum is an act of rewriting that story.
+
+**The idol, the icon, and the archetype** Why do humans worship? Not just gods — but celebrities, designers, musicians, cultural figures who seem to embody something larger than themselves. The answer is archetypal: we project onto certain figures the qualities we most need to see made real. Jane Birkin, Sofia Coppola, Frida Kahlo — these are not just women. They are **cultural archetypes**, vessels for a particular constellation of values that a particular community needs to see embodied. Understanding this doesn't diminish them. It makes them more interesting.
+
+**Ritual and the technology of transformation** Every culture has technologies for changing who you are: initiation rites, pilgrimages, fasting, meditation, confession, therapy. These are not different things — they are the same thing in different cultural vocabularies. The practices in your document — the daily discomfort, the journalling, the meditation, the shadow work — are rituals in the anthropological sense. They work because ritual has always worked, because the human nervous system responds to repeated symbolic action in ways that pure cognition cannot replicate.
+
+**Community, tribe, and the formation of identity through belonging** We do not form our identities alone. We form them in relation to groups — by identifying with some and distinguishing ourselves from others. Aesthetic communities (the people who wear Sandy Liang, the people who read Clarice Lispector, the people who do pilates and study philosophy) are tribes in the anthropological sense: groups organised around shared symbolic systems. Understanding this makes the desire for community — and the difficulty of finding it — make much more sense.
+
+**The sacred in secular life** Eliade's insight that the sacred never disappears — it only changes form — is one of the most useful ideas for understanding contemporary culture. The gym as temple. The wardrobe as ritual. The reading practice as devotion. The aspiration toward a better self as a secular religion. These are not metaphors. They are structurally identical to their sacred predecessors, serving the same psychological and social functions.
+
+---
+
+## Reading Anchors
+
+**Start here:**
+
+- _The Power of Myth_ — Joseph Campbell (interviews with Bill Moyers — conversational, accessible, and one of the best entry points into these ideas ever recorded. Also available as a documentary series on YouTube.)
+- _The Sacred and the Profane_ — Mircea Eliade (short, readable, foundational)
+
+**Then here:**
+
+- _The Hero with a Thousand Faces_ — Joseph Campbell
+- _Myth and Meaning_ — Claude Lévi-Strauss (very short — an afternoon's reading)
+- Selected essays from Jung's _The Archetypes and the Collective Unconscious_
+
+**When you're ready to go deeper:**
+
+- _The Ritual Process_ — Victor Turner
+- _Purity and Danger_ — Mary Douglas
+- _Violence and the Sacred_ — René Girard (challenging but extraordinary)
+
+---
+
+## Media Companions
+
+**Documentaries**
+
+- _The Power of Myth_ (PBS, 1988) — Campbell in conversation with Bill Moyers. Six episodes, each one an education. Begin here before reading anything.
+- _Examined Life_ (2008) — philosophers in the world, already in your media list
+- _My Octopus Teacher_ (2020) — watch it now as a meditation on attention and the sacred in nature
+
+**Films**
+
+- **Apocalypse Now** (Coppola, 1979) — the Hero's Journey taken to its darkest extreme. Campbell was deeply influenced by the same source material.
+- **The Wicker Man** (Hardy, 1973) — ritual, community, sacrifice, and the sacred in a pre-Christian context. Anthropology as horror.
+- **Midsommar** (Aster, 2019) — liminality, ritual, and transformation through community. A woman in a liminal phase — grief, dissolution of identity — encounters a culture with a completely different relationship to the sacred and the natural cycle. Anthropologically serious beneath the horror.
+- **Princess Mononoke** (Miyazaki, 1997) — myth, nature as sacred, the collision between the human and the divine. Miyazaki as mythologist.
+
+**Fiction**
+
+- **Circe** — Madeline Miller (mythology retold from the inside — a woman finding her power within a mythological framework)
+- **The Left Hand of Darkness** — Ursula K. Le Guin (anthropological science fiction — Le Guin was an anthropologist's daughter and it shows on every page)
+- **Beloved** — Toni Morrison (already in your list — add to it the understanding that Morrison is working in an explicitly mythological register)
+- **One Hundred Years of Solitude** — Gabriel García Márquez (myth as realism, the community as organism, the sacred woven into the everyday)
+
+---
+
+## Self-Discovery Homework
+
+_Unit Zero: The Anthropological Imagination_
+
+**Map your personal mythology.**
+
+Every person has a private mythology — a set of recurring symbols, figures, stories, and images that organise their inner life. This exercise is an attempt to make yours visible.
+
+In your notebook, answer the following slowly and without overthinking:
+
+- What stories (films, books, myths, fairy tales) have followed you through your life — the ones you return to, that feel personally significant beyond their content?
+- What figures — real or fictional, living or historical — have you consistently been drawn to or wanted to be like? What do they have in common?
+- What symbols, images, or objects feel charged or sacred to you, even irrationally?
+- What recurring themes appear in the things you love — across music, film, art, fiction?
+- If your life were a myth, what kind of myth would it be? What archetype are you living?
+
+Then read what you've written and ask: **what is the story I am living inside, and is it the story I want to be living?**
+
+---
+
+## Writing Prompt
+
+Write 700–900 words on this question: _What am I worshipping, and why?_
+
+Not in a religious sense — in the anthropological sense. What do you treat as sacred? What rituals do you perform and what do they mean? What idols have you constructed, and what need do they serve? What myth are you living?
+
+Write it honestly. Write it as an anthropologist studying the most interesting subject available to you, which is yourself.
+
+---
+
+_The anthropological imagination is the capacity to look at human behaviour — including your own — with genuine curiosity rather than judgment. To ask not "is this right or wrong" but "what does this tell us about what kind of creature a human being is?" That capacity, once developed, makes everything more interesting — including, and especially, yourself._
 ## Unit One: What Is a Body?
 
 _On physicality, embodiment, and the self that lives in skin_
