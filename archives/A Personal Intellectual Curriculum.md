@@ -1,3 +1,11 @@
+---------
+
+title: A Personal Intellectual Curriculum
+date: {{date:2026-04-07}}
+type: essay
+tags:
+
+---------
 
 ### Throughlines: _The Self_ & _Perception_
 
