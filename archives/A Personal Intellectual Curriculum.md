@@ -2,14 +2,12 @@
 
 title: A Personal Intellectual Curriculum
 date: 2026-04-07
-type: essay
+type: other
 tags:
 
 ---------
 
-### Throughlines: _The Self_ & _Perception_
 
----
 
 > This curriculum is built around thematic units rather than subjects, because your mind works in connections rather than categories. Each unit is anchored by a central question and approached through four lenses: **art & culture**, **philosophy & ethics**, **psychology & the self**, and **science & nature**. The units build on one another, complete them in order where possible, but return to any of them whenever life makes one feel relevant.
 
