@@ -24,8 +24,6 @@ _Why we do what we do, become who we become, and build the worlds we build_
 
 Why do humans, across all cultures, all eras, all circumstances, consistently do the same things: build hierarchies, create idols, form tribes, perform rituals, tell myths, seek the sacred, make art, fall in love with beauty, and construct elaborate systems of meaning to make sense of a universe that offers none by default?
 
-This is the anthropological question. It is also, quietly, the question your entire life is asking.
-
 ---
 
 ## Why This Unit Comes First
@@ -109,8 +107,8 @@ The "esoteric pilates princess" is not just an aesthetic. She is a **mythologica
 **Fiction**
 
 - **Circe**, Madeline Miller (mythology retold from the inside, a woman finding her power within a mythological framework)
-- **The Left Hand of Darkness**, Ursula K. Le Guin (anthropological science fiction, Le Guin was an anthropologist's daughter and it shows on every page)
-- **Beloved**, Toni Morrison (already in your list, add to it the understanding that Morrison is working in an explicitly mythological register)
+- **The Left Hand of Darkness**, Ursula K. Le Guin (anthropological science fiction, Le Guin was an anthropologist's daughter and it shows
+- **Beloved**, Toni Morrison (working in an explicitly mythological register)
 - **One Hundred Years of Solitude**, Gabriel García Márquez (myth as realism, the community as organism, the sacred woven into the everyday)
 
 ---
@@ -146,6 +144,9 @@ Write it honestly. Write it as an anthropologist studying the most interesting s
 ---
 
 _The anthropological imagination is the capacity to look at human behaviour, including your own, with genuine curiosity rather than judgment. To ask not "is this right or wrong" but "what does this tell us about what kind of creature a human being is?" That capacity, once developed, makes everything more interesting, including, and especially, yourself._
+
+---
+
 ## Unit One: What Is a Body?
 
 _On physicality, embodiment, and the self that lives in skin_
@@ -156,15 +157,15 @@ This unit is the most personal and the most pressing. Your document names a diff
 
 **Art & Culture anchor** Start with Frida Kahlo, not her biography, but her paintings themselves, particularly _The Two Fridas_ and _My Birth_. Kahlo painted her body as both subject and object, both site of pain and site of power. As you look, ask: what does it mean to represent your own body rather than simply inhabiting it?
 
-Alongside this, read John Berger's _Ways of Seeing_ (Chapter 3 in particular, on the female nude and the act of being watched). This is where your concept of the "internal voyeur" has its clearest intellectual mirror.
+Alongside this, read John Berger's _Ways of Seeing_ (Chapter 3 in particular, on the female nude and the act of being watched). This is where the concept of the "internal voyeur" has its clearest intellectual mirror.
 
-**Philosophy anchor** Read selections from Simone de Beauvoir's _The Second Sex_ (the introduction and chapter on "The Body"). De Beauvoir argues that women are taught to experience their bodies as objects to be seen rather than subjects that act. Her famous line, _"One is not born, but rather becomes, a woman"_, is the philosophical version of what your document is trying to do in practice.
+**Philosophy anchor** Read selections from Simone de Beauvoir's _The Second Sex_ (the introduction and chapter on "The Body"). De Beauvoir argues that women are taught to experience their bodies as objects to be seen rather than subjects that act. Her famous line, _"One is not born, but rather becomes, a woman"_, is the philosophical version of what this document is trying to do in practice.
 
 Pair this with a short essay: Maurice Merleau-Ponty's concept of the _lived body_ (you can access summaries of his _Phenomenology of Perception_ without reading the whole text). His central idea is that the body is not a thing we inhabit, it _is_ our way of being in the world. This is the scientific and philosophical counter to the internal voyeur.
 
-**Psychology anchor** Research the concept of **self-objectification theory** (Fredrickson & Roberts, 1997). This is the academic framework for exactly what you've named as the internal voyeur, the internalisation of an observer's perspective on your own body. Understanding the mechanism makes it easier to catch yourself doing it.
+**Psychology anchor** Research the concept of **self-objectification theory** (Fredrickson & Roberts, 1997). This is the academic framework for exactly what we've named as the internal voyeur, the internalisation of an observer's perspective on your own body. Understanding the mechanism makes it easier to catch yourself doing it.
 
-Also explore **interoception**, the scientific study of how we sense what's happening _inside_ our bodies (hunger, heartbeat, breath). Research suggests that poor interoceptive awareness is linked to body dissatisfaction. Practices like yoga, breath work, and the Wim Hof method you've already noted actively rebuild this awareness. You're already doing the science without knowing it.
+Also explore **interoception**, the scientific study of how we sense what's happening _inside_ our bodies (hunger, heartbeat, breath). Research suggests that poor interoceptive awareness is linked to body dissatisfaction. Practices like yoga, breath work, and the Wim Hof method already noted actively rebuild this awareness. 
 
 **Science anchor** Read a summary of **Lisa Feldman Barrett's** work on embodied emotion (her book _How Emotions Are Made_ is accessible and fascinating). Barrett argues that emotions are not things that happen _to_ your body, your body actively _constructs_ them, based on past experience and present sensation. This reframes the relationship between feeling and physicality entirely.
 
@@ -180,9 +181,9 @@ _On aesthetics, taste, and the culture that shapes both_
 
 This unit takes your home territory, art and culture, and subjects it to philosophical and scientific scrutiny. The goal is not to undermine your aesthetic sensibility but to _own_ it more fully by understanding where it comes from.
 
-**Art & Culture anchor** Study the history of **aesthetics as a discipline**, begin with a short overview of how the idea of "taste" developed in 18th century Europe (particularly in the work of Kant and Hume). Then contrast this with **Susan Sontag's** _Against Interpretation_, her argument that we experience art too intellectually and not sensorially enough. Sontag is a natural home for someone with your sensibility.
+**Art & Culture anchor** Study the history of **aesthetics as a discipline**, begin with a short overview of how the idea of "taste" developed in 18th century Europe (particularly in the work of Kant and Hume). Then contrast this with **Susan Sontag's** _Against Interpretation_, her argument that we experience art too intellectually and not sensorially enough. Sontag is a natural home for someone with this sensibility.
 
-Also spend time with the concept of **wabi-sabi**, the Japanese aesthetic philosophy that finds beauty in imperfection, impermanence, and incompleteness. Given your shadow self work, this philosophy has something specific to offer you.
+Also spend time with the concept of **wabi-sabi**, the Japanese aesthetic philosophy that finds beauty in imperfection, impermanence, and incompleteness. Given our shadow self work, this philosophy has something specific to offer you.
 
 **Philosophy anchor** Read Immanuel Kant's concept of the **sublime** (accessible summaries work well here), the idea that some experiences are beautiful precisely because they overwhelm us, because they exceed our ability to contain them. Then ask yourself: do you seek the sublime, or do you avoid it?
 
