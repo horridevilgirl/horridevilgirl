@@ -1,0 +1,1 @@
+An analysis of what qualifies behaviours as 'quirky' and endearing, versus 'freaky' and off-putting.
